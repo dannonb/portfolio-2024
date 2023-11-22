@@ -14,7 +14,7 @@ const Navbar = () => {
 
                 <nav className='w-full lg:w-[30%] h-full flex flex-row items-center justify-between md:mr-20'>
                     <div className='flex items-center justify-between w-full h-auto mr-[15px] px-[20px] py-[10px] text-gray-200'>
-                        <a href='#about-me' className='cursor-pointer'>About me</a>
+                        <a href='#about-me' className='cursor-pointer'>About Me</a>
                         <a href='#skills' className='cursor-pointer'>Skills</a>
                         <a href='#projects' className='cursor-pointer'>Projects</a>
                         <a href='/dannon_resume_2023.pdf' target='_blank' className='cursor-pointer'>Resume</a>
