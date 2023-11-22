@@ -281,7 +281,7 @@ export const Skill_data = [
     },
     {
       skill_name: "React Native",
-      Image: "/ReactNative .png",
+      Image: "/ReactNative.png",
       width: 70,
       height: 70,
     },
