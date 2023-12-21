@@ -4,7 +4,7 @@ import { Socials } from '@/constants'
 
 const Navbar = () => {
     return (
-        <header className='w-full h-[65px] fixed top-0 shadow-lg shadow-[#2a0e61] bg-[#03001417] backdrop-blur-md z-50 '>
+        <header className='w-full h-[65px] fixed top-0 shadow-lg shadow-[#27335A] bg-[#03001417] backdrop-blur-md z-50 '>
             <div className='w-full h-full flex flex-row items-center justify-center lg:justify-between m-auto px-[10px]'>
                 <a href='#about-me' className='h-auto w-auto flex flex-row items-center'>
                     <span className='font-bold ml-[10px] hidden md:block text-gray-300'>
@@ -17,7 +17,7 @@ const Navbar = () => {
                         <a href='#about-me' className='cursor-pointer'>About Me</a>
                         <a href='#skills' className='cursor-pointer'>Skills</a>
                         <a href='#projects' className='cursor-pointer'>Projects</a>
-                        <a href='/dannon_resume_2023.pdf' target='_blank' className='cursor-pointer'>Resume</a>
+                        <a href='/dannon_resume_2024.pdf' target='_blank' className='cursor-pointer'>Resume</a>
                     </div>
                 </nav>
 
