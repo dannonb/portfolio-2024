@@ -17,7 +17,7 @@ const Navbar = () => {
                         <a href='#about-me' className='cursor-pointer'>About Me</a>
                         <a href='#skills' className='cursor-pointer'>Skills</a>
                         <a href='#projects' className='cursor-pointer'>Projects</a>
-                        <a href='/dannon_resume_2024.pdf' target='_blank' className='cursor-pointer'>Resume</a>
+                        <a href='/dannon-resume-2025.pdf' target='_blank' className='cursor-pointer'>Resume</a>
                     </div>
                 </nav>
 
