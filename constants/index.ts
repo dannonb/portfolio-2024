@@ -363,3 +363,111 @@ export const Skill_data = [
       stack: 'React Native/Typescript'
     },
   ]
+
+  export const freelance = [
+    {
+      name: "Contino Construction",
+      src: '/cc-web.png',
+      href: 'https://continoconstruction.com',
+      stack: 'Next.js/Tailwind'
+    },
+    {
+      name: "Ice Breaker Events Co.",
+      src: '/icebreaker-web.png',
+      href: 'https://icebreakereventsco.com',
+      stack: 'Next.js/Tailwind/Square/MongoDB'
+    },
+    {
+      name: "Maximum Mechanical Plumbing",
+      src: '/mm-web.png',
+      href: 'https://maxmechplumbing.com',
+      stack: 'Wix'
+    },
+    {
+      name: "Lattes & Littles",
+      src: '/lnl-web.png',
+      href: 'https://lattesandlittles.org',
+      stack: 'Next.js/Tailwind/Eventzilla'
+    },
+  ]
+
+  export const personalProjects = [
+    {
+      name: "Gallerease",
+      src: '/gallerease-web.png',
+      href: 'https://gallerease.dev',
+      stack: 'Next.js/PostgreSQL/Prisma'
+    },
+    {
+      name: "Minute Math",
+      src: '/minute-math-web.png',
+      href: 'https://minute-math-pink.vercel.app',
+      stack: 'Next.js'
+    },
+    // {
+    //   name: "Omnicart",
+    //   src: '/bjs.webp',
+    //   href: 'https://ecommerce-cms-beige.vercel.app/',
+    //   stack: 'Next.js/PostgreSQL/Prisma'
+    // },
+    {
+      name: "Millerton Boat Storage",
+      src: '/bbs-web.png',
+      href: 'https://millerton-boat-storage.vercel.app/',
+      stack: 'Next.js/MongoDB'
+    },
+  ]
+
+  export const mobileApps = [
+    {
+      name: "BJ's",
+      src: '/bjs.webp',
+      href: 'https://onelink.to/jgkdvq',
+      stack: 'React Native/Typescript'
+    },
+    {
+      name: "Ralph Lauren",
+      src: '/rl.webp',
+      href: 'https://onelink.to/r3dp6a',
+      stack: 'React Native/Typescript'
+    },
+    {
+      name: 'Polo',
+      src: '/polo.webp',
+      href: 'https://onelink.to/wazhqa',
+      stack: 'React Native/Typescript'
+    },
+    {
+      name: "Tilly's",
+      src: '/tillys.webp',
+      href: 'https://onelink.to/jkx64n',
+      stack: 'React Native/Typescript'
+    },
+  ]
+
+  export const professionalWebsites = [
+    {
+      name: "CVS Pharmacy",
+      src: '/cvs-web.png',
+      href: 'https://cvs.com',
+      stack: 'Next.js/Docker'
+    },
+    {
+      name: "NCPS",
+      src: '/ncps-web.png',
+      href: 'https://ncps.org',
+      stack: 'Drupal/CiviCRM/Bootstrap'
+    },
+    {
+      name: "CABB",
+      src: '/cabb-web.png',
+      href: 'https://cabb.org',
+      stack: 'Drupal/CiviCRM/Bootstrap'
+    },
+    {
+      name: "CCPS",
+      src: '/ccps-web.png',
+      href: 'https://cencalpsych.org',
+      stack: 'Drupal/CiviCRM/Bootstrap'
+    },
+  ]
