@@ -8,8 +8,8 @@ import { slideInFromLeft, slideInFromRight, slideInFromTop } from '@/utils/motio
 
 const HeroContent = () => {
     return (
-        <div className='min-h-screen flex items-center justify-center px-3 sm:px-6 lg:px-8 w-full overflow-hidden'>
-            <div className='max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 xl:gap-8 items-center w-full max-w-full'>
+        <div className='min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 w-full overflow-hidden pt-20 sm:pt-24'>
+            <div className='max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-6 items-center w-full'>
                 {/* Left Content */}
                 <motion.div 
                     initial="hidden"
@@ -25,12 +25,12 @@ const HeroContent = () => {
                     </motion.div>
 
                     <motion.div variants={slideInFromLeft(0.5)} className='space-y-4 lg:space-y-6'>
-                        <h1 className='text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight break-words'>
+                        <h1 className='text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-5xl font-bold leading-tight break-words overflow-wrap-anywhere'>
                             Hello, I&apos;m{' '}
                             <span className='gradient-text'>Dannon</span>
                         </h1>
                         <div className='space-y-2 lg:space-y-3'>
-                            <p className='text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-light text-gray-300'>
+                            <p className='text-base sm:text-lg md:text-xl lg:text-xl xl:text-2xl font-light text-gray-300'>
                                 Full-Stack Developer
                             </p>
                             <p className='text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed px-2 sm:px-0'>
