@@ -179,9 +179,10 @@ const AutoAsteroidGame = () => {
     let newTargetX = currentShip.x
     let newTargetY = currentShip.y
     
-    if (closestThreat) {
+    if (closestThreat !== null) {
       // Move away from the threat
-      const dx = currentShip.x - closestThreat.x
+      const threat = closestThreat as Asteroid
+      const dx = currentShip.x - threat.x
       const avoidanceStrength = Math.max(0, 80 - minThreatDistance) / 80
       
       if (Math.abs(dx) < 40) {
