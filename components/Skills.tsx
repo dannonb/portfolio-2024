@@ -1,69 +1,61 @@
-import { Frontend_skill, Backend_skill, Full_stack, Other_skill, Skill_data, Mobile_skill } from '@/constants'
+import { Frontend_skill, Backend_skill, Full_stack, Other_skill, Mobile_skill } from '@/constants'
 import SkillDataProvider from './SkillDataProvider'
-import SkillText from './SkillText'
 
 const Skills = () => {
+    const skillCategories = [
+        { title: "Frontend", skills: Frontend_skill },
+        { title: "Backend", skills: Backend_skill },
+        { title: "Full Stack", skills: Full_stack },
+        { title: "Tools", skills: Other_skill }
+    ]
+
     return (
-        <section
-            className='flex flex-col items-center justify-center gap-3 h-full relative overflow-hidden py-20'
-            id="skills"
-            style={{ transform: 'scale(0.9)' }}
-        >
-            <SkillText />
-            <div className='hidden lg:flex flex-row justify-around flex-wrap mt-4 gap-5 items-center'>
-                {Frontend_skill.map((image, index) => (
-                    <SkillDataProvider
-                        key={index}
-                        src={image.Image}
-                        width={image.width}
-                        height={image.height}
-                        index={index}
-                    />
-                ))}
-            </div>
-            <div className='hidden lg:flex flex-row justify-around flex-wrap mt-4 gap-5 items-center'>
-                {Backend_skill.map((image, index) => (
-                    <SkillDataProvider
-                        key={index}
-                        src={image.Image}
-                        width={image.width}
-                        height={image.height}
-                        index={index}
-                    />
-                ))}
-            </div>
-            <div className='hidden lg:flex flex-row justify-around flex-wrap mt-4 gap-5 items-center'>
-                {Full_stack.map((image, index) => (
-                    <SkillDataProvider
-                        key={index}
-                        src={image.Image}
-                        width={image.width}
-                        height={image.height}
-                        index={index}
-                    />
-                ))}
-            </div>
-            <div className='hidden lg:flex flex-row justify-around flex-wrap mt-4 gap-5 items-center'>
-                {Other_skill.map((image, index) => (
-                    <SkillDataProvider
-                        key={index}
-                        src={image.Image}
-                        width={image.width}
-                        height={image.height}
-                        index={index}
-                    />
-                ))}
-            </div>
-            <div className='lg:hidden flex flex-row justify-around flex-wrap mt-4 gap-5 items-center'>
-                {Mobile_skill.map((image, index) => (
-                    <SkillDataProvider
-                        key={index}
-                        src={image.Image}
-                        width={image.width}
-                        height={image.height}
-                        index={index}
-                    />
-                ))}
+        <section className='py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8' id="skills">
+            <div className='max-w-7xl mx-auto'>
+                {/* Header */}
+                <div className='text-center mb-12 sm:mb-16'>
+                    <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold mb-4'>
+                        Technical <span className='gradient-text'>Skills</span>
+                    </h2>
+                    <p className='text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto'>
+                        Technologies and tools I use to bring ideas to life
+                    </p>
+                </div>
+
+                {/* Desktop Skills Grid */}
+                <div className='hidden md:block space-y-8 lg:space-y-12'>
+                    {skillCategories.map((category) => (
+                        <div key={category.title} className='space-y-4 lg:space-y-6'>
+                            <h3 className='text-xl lg:text-2xl font-semibold text-center'>{category.title}</h3>
+                            <div className='flex flex-wrap justify-center gap-4 lg:gap-6'>
+                                {category.skills.map((skill, index) => (
+                                    <SkillDataProvider
+                                        key={index}
+                                        src={skill.Image}
+                                        width={skill.width}
+                                        height={skill.height}
+                                        index={index}
+                                    />
+                                ))}
+                            </div>
+                        </div>
+                    ))}
+                </div>
+
+                {/* Mobile Skills Grid */}
+                <div className='md:hidden w-full px-2'>
+                    <div className='flex flex-wrap justify-center gap-3 xs:gap-4 sm:gap-6 max-w-full'>
+                        {Mobile_skill.map((skill, index) => (
+                            <SkillDataProvider
+                                key={index}
+                                src={skill.Image}
+                                width={skill.width}
+                                height={skill.height}
+                                index={index}
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
         </section>
     )

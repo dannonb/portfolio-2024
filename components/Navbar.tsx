@@ -1,40 +1,97 @@
-import Image from 'next/image'
+"use client"
 
+import Image from 'next/image'
+import { useState } from 'react'
 import { Socials } from '@/constants'
 
 const Navbar = () => {
+    const [isOpen, setIsOpen] = useState(false)
+
     return (
-        <header className='w-full h-[65px] fixed top-0 shadow-lg shadow-[#27335A] bg-[#03001417] backdrop-blur-md z-50 '>
-            <div className='w-full h-full flex flex-row items-center justify-center lg:justify-between m-auto px-[10px]'>
-                <a href='#about-me' className='h-auto w-auto flex flex-row items-center'>
-                    <span className='font-bold ml-[10px] hidden md:block text-gray-300'>
-                        Dannon Bigham
-                    </span>
-                </a>
+        <nav className='fixed top-0 w-full z-50 glass-effect'>
+            <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 sm:py-4'>
+                <div className='flex items-center justify-between'>
+                    {/* Logo */}
+                    <a href='#about-me' className='text-lg sm:text-xl font-bold hover:text-blue-400 transition-colors'>
+                        <span className='hidden sm:inline'>Dannon Bigham</span>
+                        <span className='sm:hidden'>DB</span>
+                    </a>
 
-                <nav className='w-full lg:w-[30%] h-full flex flex-row items-center justify-between md:mr-20'>
-                    <div className='flex items-center justify-between w-full h-auto mr-[15px] px-[20px] py-[10px] text-gray-200'>
-                        <a href='#about-me' className='cursor-pointer'>About Me</a>
-                        <a href='#skills' className='cursor-pointer'>Skills</a>
-                        <a href='#projects' className='cursor-pointer'>Projects</a>
-                        <a href='/Dannon_Resume.pdf' target='_blank' className='cursor-pointer'>Resume</a>
-                    </div>
-                </nav>
-
-                <div className='hidden md:flex flex-row gap-5'>
-                    {Socials.map((social) => (
-                        <a href={social.href} target='_blank' key={social.name}>
-                            <Image
-                                src={social.src}
-                                alt={social.name}
-                                width={36}
-                                height={36}
-                            />
+                    {/* Desktop Navigation */}
+                    <div className='hidden md:flex items-center space-x-8'>
+                        <a href='#about-me' className='hover:text-blue-400 transition-colors'>Home</a>
+                        <a href='#about' className='hover:text-blue-400 transition-colors'>About</a>
+                        <a href='#skills' className='hover:text-blue-400 transition-colors'>Skills</a>
+                        <a href='#projects' className='hover:text-blue-400 transition-colors'>Projects</a>
+                        <a href='#contact' className='hover:text-blue-400 transition-colors'>Contact</a>
+                        <a href='/Dannon_Resume.pdf' target='_blank' className='btn-primary'>
+                            Resume
                         </a>
-                    ))}
+                    </div>
+
+                    {/* Desktop Social Links */}
+                    <div className='hidden md:flex items-center space-x-4'>
+                        {Socials.map((social) => (
+                            <a 
+                                href={social.href} 
+                                target='_blank' 
+                                key={social.name}
+                                className='w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform'
+                            >
+                                <Image
+                                    src={social.src}
+                                    alt={social.name}
+                                    width={20}
+                                    height={20}
+                                />
+                            </a>
+                        ))}
+                    </div>
+
+                    {/* Mobile Menu Button */}
+                    <button 
+                        onClick={() => setIsOpen(!isOpen)}
+                        className='md:hidden w-10 h-10 flex items-center justify-center glass-effect rounded-lg'
+                    >
+                        <div className='w-5 h-5 flex flex-col justify-center space-y-1'>
+                            <span className={`block h-0.5 bg-white transition-all ${isOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+                            <span className={`block h-0.5 bg-white transition-all ${isOpen ? 'opacity-0' : ''}`}></span>
+                            <span className={`block h-0.5 bg-white transition-all ${isOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+                        </div>
+                    </button>
                 </div>
+
+                {/* Mobile Menu */}
+                {isOpen && (
+                    <div className='md:hidden mt-4 p-4 glass-effect rounded-lg space-y-4'>
+                        <a href='#about-me' onClick={() => setIsOpen(false)} className='block hover:text-blue-400 transition-colors'>Home</a>
+                        <a href='#about' onClick={() => setIsOpen(false)} className='block hover:text-blue-400 transition-colors'>About</a>
+                        <a href='#skills' onClick={() => setIsOpen(false)} className='block hover:text-blue-400 transition-colors'>Skills</a>
+                        <a href='#projects' onClick={() => setIsOpen(false)} className='block hover:text-blue-400 transition-colors'>Projects</a>
+                        <a href='#contact' onClick={() => setIsOpen(false)} className='block hover:text-blue-400 transition-colors'>Contact</a>
+                        <a href='/Dannon_Resume.pdf' target='_blank' className='block btn-primary text-center'>Resume</a>
+                        
+                        <div className='flex justify-center space-x-4 pt-4 border-t border-white/10'>
+                            {Socials.map((social) => (
+                                <a 
+                                    href={social.href} 
+                                    target='_blank' 
+                                    key={social.name}
+                                    className='w-8 h-8 flex items-center justify-center hover:scale-110 transition-transform'
+                                >
+                                    <Image
+                                        src={social.src}
+                                        alt={social.name}
+                                        width={20}
+                                        height={20}
+                                    />
+                                </a>
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
-        </header>
+        </nav>
     )
 }
 

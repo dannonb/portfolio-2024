@@ -27,7 +27,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#000] overflow-y-scroll overflow-x-hidden`}>
+      <body className={`${inter.className} bg-black text-white overflow-x-hidden`}>
+        <div className="fixed inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/10 to-cyan-900/20 pointer-events-none" />
         <Navbar />
         <StarsCanvas />
         {children}

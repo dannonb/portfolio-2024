@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import Image from 'next/image';
+import Image from 'next/image'
 
 interface Props {
     src: string;
@@ -16,28 +16,23 @@ const SkillDataProvider = ({ src, width, height, index } : Props) => {
         triggerOnce: true
     }) 
 
-    const imageVariants = {
-        hidden: { opacity: 0 },
-        visible: { opacity: 1 }
-    }
-
-    const animationDelay = 0.3
-
     return (
         <motion.div
             ref={ref}
-            initial="hidden"
-            variants={imageVariants}
-            animate={inView ? 'visible' : 'hidden'}
-            custom={index}
-            transition={{delay: index * animationDelay}}
+            initial={{ opacity: 0, y: 20 }}
+            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+            transition={{ delay: index * 0.1, duration: 0.5 }}
+            className='group'
         >
-            <Image
-                src={src}
-                width={width}
-                height={height}
-                alt="Skill Image"
-            />
+            <div className='w-16 h-16 glass-effect rounded-xl flex items-center justify-center hover-lift group-hover:border-blue-500/50'>
+                <Image
+                    src={src}
+                    width={32}
+                    height={32}
+                    alt="Skill"
+                    className='group-hover:scale-110 transition-transform duration-300'
+                />
+            </div>
         </motion.div>
     )
 }
