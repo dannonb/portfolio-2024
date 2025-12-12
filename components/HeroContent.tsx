@@ -85,7 +85,7 @@ const HeroContent = () => {
                         <p className='text-xs sm:text-sm text-gray-500 flex items-center justify-center lg:justify-start gap-2 flex-wrap'>
                             <span className='w-2 h-2 bg-green-400 rounded-full animate-pulse'></span>
                             <span className='hidden sm:inline'>AI auto-pilot active - press WASD to take control! →</span>
-                            <span className='sm:hidden'>Game coming soon! →</span>
+                            <span className='sm:hidden'>AI playing - touch arrows to take control! →</span>
                         </p>
                     </motion.div>
                 </motion.div>

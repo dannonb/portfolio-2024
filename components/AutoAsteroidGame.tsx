@@ -671,7 +671,8 @@ const AutoAsteroidGame = () => {
               <button
                 onTouchStart={() => handleMobileControl('w')}
                 onMouseDown={() => handleMobileControl('w')}
-                className="w-7 h-7 glass-effect rounded-lg flex items-center justify-center text-white hover:bg-white/20 active:bg-white/30 transition-colors text-sm"
+                className="w-7 h-7 glass-effect rounded-lg flex items-center justify-center text-white hover:bg-white/20 active:bg-white/30 transition-colors text-sm select-none touch-manipulation"
+                style={{ userSelect: 'none', WebkitUserSelect: 'none', WebkitTouchCallout: 'none' }}
               >
                 ↑
               </button>
@@ -681,7 +682,8 @@ const AutoAsteroidGame = () => {
               <button
                 onTouchStart={() => handleMobileControl('a')}
                 onMouseDown={() => handleMobileControl('a')}
-                className="w-7 h-7 glass-effect rounded-lg flex items-center justify-center text-white hover:bg-white/20 active:bg-white/30 transition-colors text-sm"
+                className="w-7 h-7 glass-effect rounded-lg flex items-center justify-center text-white hover:bg-white/20 active:bg-white/30 transition-colors text-sm select-none touch-manipulation"
+                style={{ userSelect: 'none', WebkitUserSelect: 'none', WebkitTouchCallout: 'none' }}
               >
                 ←
               </button>
@@ -691,7 +693,8 @@ const AutoAsteroidGame = () => {
               <button
                 onTouchStart={() => handleMobileControl('d')}
                 onMouseDown={() => handleMobileControl('d')}
-                className="w-7 h-7 glass-effect rounded-lg flex items-center justify-center text-white hover:bg-white/20 active:bg-white/30 transition-colors text-sm"
+                className="w-7 h-7 glass-effect rounded-lg flex items-center justify-center text-white hover:bg-white/20 active:bg-white/30 transition-colors text-sm select-none touch-manipulation"
+                style={{ userSelect: 'none', WebkitUserSelect: 'none', WebkitTouchCallout: 'none' }}
               >
                 →
               </button>
@@ -701,7 +704,8 @@ const AutoAsteroidGame = () => {
               <button
                 onTouchStart={() => handleMobileControl('s')}
                 onMouseDown={() => handleMobileControl('s')}
-                className="w-7 h-7 glass-effect rounded-lg flex items-center justify-center text-white hover:bg-white/20 active:bg-white/30 transition-colors text-sm"
+                className="w-7 h-7 glass-effect rounded-lg flex items-center justify-center text-white hover:bg-white/20 active:bg-white/30 transition-colors text-sm select-none touch-manipulation"
+                style={{ userSelect: 'none', WebkitUserSelect: 'none', WebkitTouchCallout: 'none' }}
               >
                 ↓
               </button>
